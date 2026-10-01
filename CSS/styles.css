@@ -47,7 +47,17 @@ body::before {
 	background-size: 18px 18px;
 	mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
-
+footer {
+    width: min(100% - 3rem, 68rem);
+    margin-top: 1.5rem;
+    padding: 1.5rem clamp(1.5rem, 6vw, 5rem);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+    text-align: center;
+}
 header,
 main,
 section {
