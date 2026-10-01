@@ -49,7 +49,8 @@ body::before {
 }
 
 header,
-main {
+main,
+section {
 	width: min(100% - 3rem, 68rem);
 }
 
@@ -161,6 +162,24 @@ main {
 	backdrop-filter: blur(14px);
 }
 
+section {
+	margin-top: 1.5rem;
+	padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 2rem;
+	background: rgba(255, 255, 255, 0.62);
+	box-shadow: var(--shadow);
+	backdrop-filter: blur(14px);
+}
+
+h2 {
+	margin: 0 0 0.75rem;
+	color: var(--coral-dark);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	line-height: 1;
+}
+
 main::before {
 	display: block;
 	width: 5rem;
@@ -181,7 +200,8 @@ p {
 
 @media (max-width: 600px) {
 	header,
-	main {
+	main,
+	section {
 		width: min(100% - 1.5rem, 68rem);
 	}
 
@@ -197,15 +217,19 @@ p {
 		height: 2.75rem;
 	}
 
-		nav ul {
-			gap: 0.6rem 1rem;
-		}
+	nav ul {
+		gap: 0.6rem 1rem;
+	}
 
-		nav a {
-			font-size: 0.72rem;
-		}
+	nav a {
+		font-size: 0.72rem;
+	}
 
 	main {
 		border-radius: 0 0 1.25rem 1.25rem;
+	}
+
+	section {
+		border-radius: 1.25rem;
 	}
 }
